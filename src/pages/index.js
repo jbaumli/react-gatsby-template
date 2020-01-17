@@ -1,93 +1,108 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import Banner from '../components/Banner'
 
-import pic01 from '../assets/images/pic01.jpg'
-import pic02 from '../assets/images/pic02.jpg'
-import pic03 from '../assets/images/pic03.jpg'
-import pic04 from '../assets/images/pic04.jpg'
-import pic05 from '../assets/images/pic05.jpg'
-import pic06 from '../assets/images/pic06.jpg'
+const HomeIndex = (props) => (
+    <Layout>
+        <Helmet>
+            <title>Elements - Forty by HTML5 UP</title>
+            <meta name="description" content="Elements Page" />
+        </Helmet>
 
-class HomeIndex extends React.Component {
-    render() {
+        <div id="main" className="alt">
+            <section id="one">
+                <div className="inner">
+                    <div className="grid-wrapper">
+                        <div className="col-6 first-section">
+                            <form method="post" action="#">
+                                <h3>Section 1</h3>
+                                <div className="col-12">
+                                    <div className="select-wrapper mb-2">
+                                        <label htmlFor="demo-category1">Dropdown1</label>
+                                        <select name="demo-category1" id="demo-category1">
+                                            <option defaultValue="">- Category -</option>
+                                            <option value="1">Manufacturing</option>
+                                            <option value="1">Shipping</option>
+                                            <option value="1">Administration</option>
+                                            <option value="1">Human Resources</option>
+                                        </select>
+                                    </div>
+                                    <div className="select-wrapper mb-2">
+                                        <label htmlFor="demo-category2">Dropdown2</label>
+                                        <select name="demo-category2" id="demo-category2">
+                                            <option defaultValue="">- Category -</option>
+                                            <option value="1">Manufacturing</option>
+                                            <option value="1">Shipping</option>
+                                            <option value="1">Administration</option>
+                                            <option value="1">Human Resources</option>
+                                        </select>
+                                    </div>
+                                    <div className="select-wrapper mb-2">
+                                        <label htmlFor="demo-category3">Dropdown3</label>
+                                        <select name="demo-category3" id="demo-category3">
+                                            <option defaultValue="">- Category -</option>
+                                            <option value="1">Manufacturing</option>
+                                            <option value="1">Shipping</option>
+                                            <option value="1">Administration</option>
+                                            <option value="1">Human Resources</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="grid-wrapper">
+                                    <div className="col-6">
+                                        <div className="mb-5">
+                                            <label htmlFor="demo-name">Name</label>
+                                            <input type="text" name="demo-name" id="demo-name" defaultValue="" placeholder="Name" />
+                                        </div>
+                                    </div>
 
-        return (
-            <Layout>
-                <Helmet
-                    title="Gatsby Starter - Forty"
-                    meta={[
-                        { name: 'description', content: 'Sample' },
-                        { name: 'keywords', content: 'sample, something' },
-                    ]}
-                >
-                </Helmet>
-
-                <Banner />
-
-                <div id="main">
-                    <section id="one" className="tiles">
-                        <article style={{backgroundImage: `url(${pic01})`}}>
-                            <header className="major">
-                                <h3>Aliquam</h3>
-                                <p>Ipsum dolor sit amet</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
-                        </article>
-                        <article style={{backgroundImage: `url(${pic02})`}}>
-                            <header className="major">
-                                <h3>Tempus</h3>
-                                <p>feugiat amet tempus</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
-                        </article>
-                        <article style={{backgroundImage: `url(${pic03})`}}>
-                            <header className="major">
-                                <h3>Magna</h3>
-                                <p>Lorem etiam nullam</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
-                        </article>
-                        <article style={{backgroundImage: `url(${pic04})`}}>
-                            <header className="major">
-                                <h3>Ipsum</h3>
-                                <p>Nisl sed aliquam</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
-                        </article>
-                        <article style={{backgroundImage: `url(${pic05})`}}>
-                            <header className="major">
-                                <h3>Consequat</h3>
-                                <p>Ipsum dolor sit amet</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
-                        </article>
-                        <article style={{backgroundImage: `url(${pic06})`}}>
-                            <header className="major">
-                                <h3>Etiam</h3>
-                                <p>Feugiat amet tempus</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
-                        </article>
-                    </section>
-                    <section id="two">
-                        <div className="inner">
-                            <header className="major">
-                                <h2>Massa libero</h2>
-                            </header>
-                            <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-                            <ul className="actions">
-                                <li><Link to="/landing" className="button next">Get Started</Link></li>
-                            </ul>
+                                    <div className="col-12">
+                                        <ul className="actions small short-list">
+                                            <li><a href="#" className="button special small icon fa-plus">Add</a></li>
+                                            <li><a href="#" className="button small icon fa-undo">Reset</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    </section>
+                        <div className="col-6">
+                            &nbsp;
+                        </div>
+                        <div className="col-6 second-section">
+                            <h3>Section 2</h3>
+                            <div className="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Col1</th>
+                                            <th>Col2</th>
+                                            <th>Col3</th>
+                                            <th>Col4</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" id="demo-copy1" name="demo-copy1" /><label htmlFor="demo-copy1">Checkbox 1</label></td>
+                                            <td>#</td>
+                                            <td>#</td>
+                                            <td>#</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" id="demo-copy2" name="demo-copy2" /><label htmlFor="demo-copy2">Checkbox 2</label></td>
+                                            <td>#</td>
+                                            <td>#.</td>
+                                            <td>#</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </section>
+        </div>
 
-            </Layout>
-        )
-    }
-}
+    </Layout>
+)
 
 export default HomeIndex

@@ -7,7 +7,7 @@
 /* Form */
 
 	form {
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 (_size(element-margin) * .1) 0;
 
 		.field {
 			margin: 0 0 (_size(element-margin) * 1) 0;
@@ -25,6 +25,10 @@
 
 		> .actions {
 			margin: (_size(element-margin) * 1.25) 0 0 0 !important;
+		}
+
+		.short-list {
+			margin: 0em !important;
 		}
 
 		@include breakpoint(small) {
@@ -66,7 +70,7 @@
 		font-size: 0.8em;
 		font-weight: _font(weight-bold);
 		letter-spacing: _font(letter-spacing-alt);
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+		margin: 0 0 (_size(element-margin) * 0.1) 0;
 		text-transform: uppercase;
 	}
 
@@ -89,6 +93,7 @@
 		text-decoration: none;
 		width: 100%;
 		resize: vertical;
+		border-radius: .25rem;
 
 		&:invalid {
 			box-shadow: none;
@@ -101,28 +106,43 @@
 	}
 
 	.select-wrapper {
-		@include icon;
+		//@include icon;
 		display: block;
 		position: relative;
+		margin-right: 5px;
 
-		&:before {
-			color: _palette(border);
-			content: '\f078';
-			display: block;
-			height: _size(element-height);
-			line-height: _size(element-height);
-			pointer-events: none;
-			position: absolute;
-			right: 0;
-			text-align: center;
-			top: 0;
-			width: _size(element-height);
+		//&:before {
+		//	color: _palette(border);
+		//	content: '\f078';
+		//	display: block;
+		//	height: _size(element-height);
+		//	line-height: _size(element-height);
+		//	pointer-events: none;
+		//	position: absolute;
+		//	right: 0;
+		//	text-align: center;
+		//	top: 0;
+		//	width: _size(element-height);
+		//}
+
+		select{
+			-webkit-appearance: menulist;
+			border-radius: .25rem;
+		}
+
+		select option {
+			color: #ffffff;
+			background: #242943;
 		}
 
 		select::-ms-expand {
 			display: none;
 		}
 	}
+
+	.col-12 {
+		display: flex;
+	  }
 
 	input[type="text"],
 	input[type="password"],

@@ -13,6 +13,16 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+	.first-section {
+		background: #1e2339;
+		padding: 5px;
+	}
+
+	.second-section {
+		background: #1e2339;
+		padding: 5px;
+	}
+
 	@include skel-breakpoints((
 		xlarge: '(max-width: 1680px)',
 		large: '(max-width: 1280px)',
@@ -30,6 +40,7 @@
 	@mixin inner {
 		> .inner {
 			@include padding(4em, 0);
+			padding: 0em !important;
 			margin: 0 auto;
 			max-width: _size(inner);
 			width: calc(100% - 6em);
